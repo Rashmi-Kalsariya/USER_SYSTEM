@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="mb-4">Welcome, <%= user.name %></h2>
+      
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Your Profile</h5>
+          <p class="card-text">Email: <%= user.email %></p>
+          <p class="card-text">Member since: <%= new Date(user.createdAt).toLocaleDateString() %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

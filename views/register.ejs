@@ -1,0 +1,32 @@
+<div class="form-container">
+  <h2 class="text-center mb-4">Register</h2>
+  
+  <form action="/users/register" method="POST" class="needs-validation" novalidate>
+    <div class="mb-3">
+      <label for="name" class="form-label">Full Name</label>
+      <input type="text" class="form-control" id="name" name="name" required>
+      <div class="invalid-feedback">Please enter your name.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="email" name="email" required>
+      <div class="invalid-feedback">Please enter a valid email address.</div>
+    </div>
+    
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password" name="password" required>
+      <div class="progress mt-2" style="height: 5px;">
+        <div id="password-strength" class="progress-bar" style="width: 0%"></div>
+      </div>
+      <div class="invalid-feedback">Password must be at least 6 characters.</div>
+    </div>
+    
+    <button type="submit" class="btn btn-primary w-100">Register</button>
+  </form>
+  
+  <div class="text-center mt-3">
+    <p>Already have an account? <a href="/users/login">Login here</a></p>
+  </div>
+</div>

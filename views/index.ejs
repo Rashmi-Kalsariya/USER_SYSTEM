@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-8 text-center">
+      <h1 class="display-4 mb-4">Welcome to Cognifyz</h1>
+      <p class="lead">Where Data Meets Intelligence</p>
+      
+      <% if (!user) { %>
+        <div class="mt-4">
+          <a href="/users/login" class="btn btn-primary me-3">Login</a>
+          <a href="/users/register" class="btn btn-outline-primary">Register</a>
+        </div>
+      <% } else { %>
+        <div class="mt-4">
+          <a href="/dashboard" class="btn btn-primary">Go to Dashboard</a>
+        </div>
+      <% } %>
+    </div>
+  </div>
+</div>
