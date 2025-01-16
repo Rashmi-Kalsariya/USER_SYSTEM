@@ -1,17 +1,16 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const { protect } = require('../middleware/auth');
+const { protect } = require("../middleware/auth");
 
-// Example API endpoint
-router.get('/user', protect, async (req, res) => {
+router.get("/user", protect, async (req, res) => {
   try {
     res.json({
       success: true,
       user: {
         id: req.user._id,
         name: req.user.name,
-        email: req.user.email
-      }
+        email: req.user.email,
+      },
     });
   } catch (error) {
     res.status(500).json({ success: false, error: error.message });
